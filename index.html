@@ -1,2 +1,151 @@
-<img src="/pictures/phone_dissector_0_sized.png" alt="Phone Dissector">
-<h1>Phone Dissector</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Dissector - Deep Android Diagnostics & System Inspection</title>
+    <meta name="description" content="Explore and test your Android device's hardware, sensors, battery health, and system components with Phone Dissector.">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --dark-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --text-muted: #a0a0a0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .btn-download {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-download:hover {
+            background-color: #0b5ed7;
+        }
+
+        container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            display: block;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 1.8rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #2a2a2a;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="hero">
+            <h1>Phone Dissector</h1>
+            <p>Inspect, diagnose, and analyze your Android device hardware & system internals in real-time.</p>
+            <a href="https://play.google.com/store/apps/details?id=org.paldan.phonedissector" target="_blank" rel="noopener" class="btn-download">
+                Get it on Google Play
+            </a>
+        </div>
+    </header>
+
+    <container>
+        <h2 class="section-title">Key Features</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🔍 Hardware Diagnostics</h3>
+                <p>Run thorough checks on display, touch screen, camera, speakers, and microphone to identify underlying hardware issues.</p>
+            </div>
+            <div class="card">
+                <h3>📊 Real-Time Sensor Monitoring</h3>
+                <p>Monitor live output from built-in sensors including the accelerometer, gyroscope, magnetometer, proximity, and light sensors.</p>
+            </div>
+            <div class="card">
+                <h3>🔋 Battery & Power Analysis</h3>
+                <p>Track battery health, temperature, voltage, and charging status to maximize battery lifespan and performance.</p>
+            </div>
+            <div class="card">
+                <h3>💾 System & Storage Info</h3>
+                <p>Get detailed technical specs regarding your CPU architecture, RAM allocation, storage usage, and OS build details.</p>
+            </div>
+        </div>
+    </container>
+
+    <footer>
+        <p>&copy; Phone Dissector. Available on the <a href="https://play.google.com/store/apps/details?id=org.paldan.phonedissector" target="_blank" rel="noopener">Google Play Store</a>.</p>
+    </footer>
+
+</body>
+</html>
+
