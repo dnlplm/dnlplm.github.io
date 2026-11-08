@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone Dissector - Deep Android Diagnostics & System Inspection</title>
-    <meta name="description" content="Explore and test your Android device's hardware, sensors, battery health, and system components with Phone Dissector.">
+    <title>Phone Dissector - Android Cellular & Telephony Diagnostics</title>
+    <meta name="description" content="A comprehensive cellular network diagnostic tool for real-time telemetry analysis, 5G NR/4G LTE signal metrics, Multi-SIM inspection, APN tools, and XML diagnostic exporting.">
     <style>
         :root {
             --primary-color: #0d6efd;
@@ -24,7 +24,7 @@
         }
 
         header {
-            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            background: linear-gradient(135deg, #1f1c2c, #414345);
             padding: 4rem 1.5rem;
             text-align: center;
         }
@@ -38,7 +38,7 @@
         .hero p {
             font-size: 1.25rem;
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto 2rem auto;
         }
 
@@ -73,7 +73,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
         }
 
@@ -82,11 +82,13 @@
             padding: 1.8rem;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border: 1px solid #2a2a2a;
         }
 
         .card h3 {
             margin-top: 0;
             color: #ffffff;
+            font-size: 1.2rem;
         }
 
         .card p {
@@ -113,7 +115,7 @@
     <header>
         <div class="hero">
             <h1>Phone Dissector</h1>
-            <p>Inspect, diagnose, and analyze your Android device hardware & system internals in real-time.</p>
+            <p>Advanced cellular network diagnostics and real-time telephony stack inspection for Android engineers, network testers, and power users.</p>
             <a href="https://play.google.com/store/apps/details?id=org.paldan.phonedissector" target="_blank" rel="noopener" class="btn-download">
                 Get it on Google Play
             </a>
@@ -124,20 +126,28 @@
         <h2 class="section-title">Key Features</h2>
         <div class="grid">
             <div class="card">
-                <h3>🔍 Hardware Diagnostics</h3>
-                <p>Run thorough checks on display, touch screen, camera, speakers, and microphone to identify underlying hardware issues.</p>
+                <h3>📶 Real-Time Cellular & Modem Diagnostics</h3>
+                <p>Monitor live service states (In Service, Emergency, Power Off), MCC/MNC operator identifiers, data connection state, and active radio technologies (5G NR, LTE, HSPA+, WCDMA, GSM).</p>
             </div>
             <div class="card">
-                <h3>📊 Real-Time Sensor Monitoring</h3>
-                <p>Monitor live output from built-in sensors including the accelerometer, gyroscope, magnetometer, proximity, and light sensors.</p>
+                <h3>📊 Advanced Signal Quality Metrics</h3>
+                <p>Precise signal strength reporting (dBm, ASU) with tech-specific metrics: SS-RSRP/SS-RSRQ/SS-SINR for 5G NR; RSRP/RSRQ/RSSI/RSSNR/CQI for 4G LTE; and RSCP/EC/NO for legacy networks.</p>
             </div>
             <div class="card">
-                <h3>🔋 Battery & Power Analysis</h3>
-                <p>Track battery health, temperature, voltage, and charging status to maximize battery lifespan and performance.</p>
+                <h3>📡 Serving & Neighboring Cell Inspection</h3>
+                <p>Detailed insight into primary and neighbor cells, including cell identification parameters (CID, eNodeB, gNodeB, TAC/LAC, PCI, EARFCN/ARFCN) and frequency band classification.</p>
             </div>
             <div class="card">
-                <h3>💾 System & Storage Info</h3>
-                <p>Get detailed technical specs regarding your CPU architecture, RAM allocation, storage usage, and OS build details.</p>
+                <h3>📱 Multi-SIM & Subscription Analysis</h3>
+                <p>Full dual-SIM/multi-SIM slot analysis featuring SIM operator info, subscription IDs, slot index, ICCID data, voice/data roaming status, and real-time SIM hardware state monitoring.</p>
+            </div>
+            <div class="card">
+                <h3>⚙️ Access Point Name (APN) Inspector</h3>
+                <p>Comprehensive breakdown of active and configured APNs, detailing APN addresses, protocol settings, type flags (default, supl, mms, ia), and active data call states.</p>
+            </div>
+            <div class="card">
+                <h3>📄 XML Export & Diagnostic Reporting</h3>
+                <p>Generate fully structured XML diagnostic reports containing all active telephony metrics, signal parameters, cell info, and APNs for instant sharing and post-analysis.</p>
             </div>
         </div>
     </container>
@@ -148,4 +158,3 @@
 
 </body>
 </html>
-
