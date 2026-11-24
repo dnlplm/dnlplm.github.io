@@ -12,6 +12,8 @@
             --card-bg: #1e1e1e;
             --text-color: #e0e0e0;
             --text-muted: #a0a0a0;
+            --border-color: #2a2a2a;
+            --accent-bg: #172234;
         }
 
         body {
@@ -27,6 +29,13 @@
             background: linear-gradient(135deg, #1f1c2c, #414345);
             padding: 4rem 1.5rem;
             text-align: center;
+        }
+
+        .hero-banner {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
         }
 
         .hero h1 {
@@ -58,17 +67,17 @@
             background-color: #0b5ed7;
         }
 
-        container {
+        .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 3rem 1.5rem;
-            display: block;
         }
 
         .section-title {
             text-align: center;
             font-size: 2rem;
             margin-bottom: 2.5rem;
+            color: #ffffff;
         }
 
         .grid {
@@ -82,7 +91,7 @@
             padding: 1.8rem;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            border: 1px solid #2a2a2a;
+            border: 1px solid var(--border-color);
         }
 
         .card h3 {
@@ -94,12 +103,112 @@
         .card p {
             color: var(--text-muted);
             font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .platform-section {
+            margin-top: 4rem;
+            background-color: var(--card-bg);
+            padding: 2.2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+            border: 1px solid var(--border-color);
+        }
+
+        .platform-badge {
+            display: inline-block;
+            background-color: var(--accent-bg);
+            color: #6ea8fe;
+            border: 1px solid rgba(13, 110, 253, 0.35);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.75rem;
+            border-radius: 999px;
+            margin-bottom: 0.9rem;
+        }
+
+        .platform-section h2 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            color: #ffffff;
+        }
+
+        .platform-section p {
+            color: var(--text-color);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .platform-section code {
+            background-color: #262626;
+            color: #9ec5fe;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.92em;
+        }
+
+        .platform-list {
+            margin: 1rem 0 1.5rem 1.25rem;
+            color: var(--text-muted);
+        }
+
+        .platform-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .platform-list strong {
+            color: var(--text-color);
+        }
+
+        .screenshot-box {
+            margin: 1.8rem 0;
+            text-align: center;
+        }
+
+        .screenshot-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid #383838;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+        }
+
+        .screenshot-caption {
+            margin-top: 0.75rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .contact-box {
+            background-color: var(--accent-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.2rem 1.4rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 1.5rem;
+        }
+
+        .contact-box p {
+            margin: 0;
+            color: var(--text-color);
+        }
+
+        .contact-box a {
+            color: #6ea8fe;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
         }
 
         footer {
             text-align: center;
             padding: 2rem;
-            border-top: 1px solid #2a2a2a;
+            border-top: 1px solid var(--border-color);
             color: var(--text-muted);
             font-size: 0.9rem;
         }
@@ -123,7 +232,7 @@
         </div>
     </header>
 
-    <container>
+    <div class="container">
         <h2 class="section-title">Key Features</h2>
         <div class="grid">
             <div class="card">
@@ -151,7 +260,36 @@
                 <p>Generate fully structured XML diagnostic reports containing all active telephony metrics, signal parameters, cell info, and APNs for instant sharing and post-analysis.</p>
             </div>
         </div>
-    </container>
+
+        <section id="platform-certificate" class="platform-section">
+            <span class="platform-badge">Platform Certificate Mode</span>
+            <h2>Privileged Capabilities with a Platform Certificate</h2>
+            <p>
+                When <strong>Phone Dissector</strong> is signed with the target Android build's <strong>platform certificate</strong>, it unlocks privileged telephony capabilities that are not available to standard Play Store builds.
+            </p>
+            <ul class="platform-list">
+                <li>
+                    <strong>Data Connections on Non-Default APNs:</strong> From the <em>Data &amp; Capabilities</em> view, you can trigger and manage data connections on APN types other than <code>default</code>—specifically <code>supl</code>, <code>dun</code>, and <code>mms</code>[cite: 1].
+                </li>
+                <li>
+                    <strong>Live APN State &amp; Origin Visibility:</strong> Inspect configured APN profiles, active connection status, and whether a session was started by the system/another app or requested by Phone Dissector[cite: 1].
+                </li>
+            </ul>
+
+            <figure class="screenshot-box">
+                <img src="pictures/screenshot_data.png" alt="Phone Dissector Data & Capabilities screen showing APN profiles for default,ia,supl, dun, and mms with data connection toggles">
+                <figcaption class="screenshot-caption">
+                    <em>Data &amp; Capabilities</em> view with platform signing: managing data connections across <code>default,ia,supl</code>, <code>dun</code>, and <code>mms</code> APNs[cite: 1].
+                </figcaption>
+            </figure>
+
+            <div class="contact-box">
+                <p>
+                    <strong>Source Code or APK for Platform Signing:</strong> If you need the source code or an APK package to sign with your platform certificate, please contact the developer directly via email at <a href="mailto:dnlplm@gmail.com">dnlplm@gmail.com</a> or through <a href="https://github.com/dnlplm" target="_blank" rel="noopener">GitHub</a>.
+                </p>
+            </div>
+        </section>
+    </div>
 
     <footer>
         <p>&copy; Phone Dissector. Available on the <a href="https://play.google.com/store/apps/details?id=org.paldan.phonedissector" target="_blank" rel="noopener">Google Play Store</a>.</p>
